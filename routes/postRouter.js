@@ -1,19 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
+const postController = require('../controllers/postController');
 
 // 投稿関係のAPI
 
-router.get('/', (req, res) => {
-    res.status(501).end();
-});
-
-router.get('/:postId', (req, res) => {
-    res.status(501).end();
-
-});
-
-router.post('/', (req, res) => {
-    res.status(501).end();
-});
+router.get('/', postController.post_list);
+router.get('/:postId', postController.post_detail);
+router.post('/', postController.post_create);
 
 module.exports = router;

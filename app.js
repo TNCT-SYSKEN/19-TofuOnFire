@@ -1,9 +1,9 @@
 const express = require('express');
 const logger = require('morgan');
 
-var postRouter = require('./routes/postRouter');
-var likeRouter = require('./routes/likeRouter');
-var userRouter = require('./routes/userRouter');
+const postRouter = require('./routes/postRouter');
+const likeRouter = require('./routes/likeRouter');
+const userRouter = require('./routes/userRouter');
 
 const app = express();
 
