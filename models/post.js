@@ -1,13 +1,16 @@
 const post = {
-    list : function() {
+    list: function() {
 
     },
-    get_detail : function(postId) {
+    get_detail: function(postId) {
 
     },
-    delete : function(postId) {
+    create: function(postId) {
         
-    }
+    },
+    exists: function(postId) {
+        
+    } 
 };
 
 module.exports = post;
