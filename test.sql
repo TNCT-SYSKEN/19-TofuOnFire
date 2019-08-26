@@ -25,5 +25,5 @@ CREATE TABLE Nice (
   UserID int NOT NULL,
   FOREIGN KEY(UserID) REFERENCES User(UserID),
   FOREIGN KEY(PostID) REFERENCES Post(PostID)
-) ;
+);
 
