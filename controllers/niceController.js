@@ -1,18 +1,18 @@
 const controller = {};
 
-controller.like_create = (req, res) => {
+controller.nice_create = (req, res) => {
     res.status(501).end();
 };
 
-controller.like_delete = (req, res) => {
+controller.nice_delete = (req, res) => {
     res.status(501).end();
 };
 
-controller.like_exists = (req, res) => {
+controller.nice_exists = (req, res) => {
     res.status(501).end();
 };
 
-controller.like_count = (req, res) => {
+controller.nice_count = (req, res) => {
     res.status(501).end();
 };
 

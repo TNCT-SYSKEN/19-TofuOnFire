@@ -1,4 +1,4 @@
-const like = {
+const nice = {
     create : function(userId, postId) {
 
     },
@@ -13,4 +13,4 @@ const like = {
     }
 };
 
-module.exports = like;
+module.exports = nice;
