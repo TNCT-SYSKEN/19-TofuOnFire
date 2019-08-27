@@ -20,7 +20,9 @@ app.use(function(req, res, next) {
 });
 
 app.use(function(err, req, res, next) {
-    res.send(JSON.stringify(err));
+    res.send({
+        "error": err
+    });
 });
 
 const port = process.env.PORT || 3000;
