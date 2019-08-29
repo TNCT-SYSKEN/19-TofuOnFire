@@ -9,9 +9,9 @@ const userController = require('../controllers/userController')
 
 // ユーザ関係のAPI
 
-router.get('/:userId(\\d+)', userController.user_exists);
-router.post('/', userController.user_create);
-router.delete('/:userId(\\d+)/:postId(\\d+)', userController.user_delete);
+router.get('/:userId(\\d+)', userController.userExists);
+router.post('/', userController.userCreate);
+router.delete('/:userId(\\d+)/:postId(\\d+)', userController.userDelete);
 
 router.param(['postId'], (req, res, next, val) => {
     if (!Post.exists(val)) {

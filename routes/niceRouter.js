@@ -9,10 +9,10 @@ const niceController = require('../controllers/niceController');
 
 // いいね関係のAPI
 
-router.put('/:userId(\\d+)/:postId(\\d+)', niceController.nice_create);
-router.delete('/:userId(\\d+)/:postId(\\d+)', niceController.nice_delete);
-router.get('/:userId(\\d+)/:postId(\\d+)', niceController.nice_exists);
-router.get('/:postId(\\d+)', niceController.nice_count);
+router.put('/:userId(\\d+)/:postId(\\d+)', niceController.niceCreate);
+router.delete('/:userId(\\d+)/:postId(\\d+)', niceController.niceDelete);
+router.get('/:userId(\\d+)/:postId(\\d+)', niceController.niceExists);
+router.get('/:postId(\\d+)', niceController.niceCount);
 
 router.param(['postId'], (req, res, next, val) => {
     if (!Post.exists(val)) {

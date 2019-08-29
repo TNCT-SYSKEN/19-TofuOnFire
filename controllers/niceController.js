@@ -1,18 +1,18 @@
 const controller = {};
 
-controller.nice_create = (req, res, next) => {
+controller.niceCreate = (req, res, next) => {
     res.status(501).end();
 };
 
-controller.nice_delete = (req, res, next) => {
+controller.niceDelete = (req, res, next) => {
     res.status(501).end();
 };
 
-controller.nice_exists = (req, res, next) => {
+controller.niceExists = (req, res, next) => {
     res.status(501).end();
 };
 
-controller.nice_count = (req, res, next) => {
+controller.niceCount = (req, res, next) => {
     res.status(501).end();
 };
 

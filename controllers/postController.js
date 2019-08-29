@@ -1,14 +1,14 @@
 const controller = {};
 
-controller.post_list = (req, res, next) => {
+controller.postList = (req, res, next) => {
     res.status(501).end();
 };
 
-controller.post_detail = (req, res, next) => {
+controller.postDetail = (req, res, next) => {
     res.status(501).end();
 };
 
-controller.post_create = (req, res, next) => {
+controller.postCreate = (req, res, next) => {
     res.status(501).end();
 };
 

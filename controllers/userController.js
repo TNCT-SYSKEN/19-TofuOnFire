@@ -1,14 +1,14 @@
 const controller = {};
 
-controller.user_exists = (req, res, next) => {
+controller.userExists = (req, res, next) => {
     res.status(501).end();
 };
 
-controller.user_create = (req, res, next) => {
+controller.userCreate = (req, res, next) => {
     res.status(501).end();
 };
 
-controller.user_delete = (req, res, next) => {
+controller.userDelete = (req, res, next) => {
     res.status(501).end();
 };
 

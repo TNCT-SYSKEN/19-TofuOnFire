@@ -9,9 +9,9 @@ const postController = require('../controllers/postController');
 
 // 投稿関係のAPI
 
-router.get('/', postController.post_list);
-router.get('/:postId(\\d+)', postController.post_detail);
-router.post('/', postController.post_create);
+router.get('/', postController.postList);
+router.get('/:postId(\\d+)', postController.postDetail);
+router.post('/', postController.postCreate);
 
 router.param(['postId'], (req, res, next, val) => {
     if (!Post.exists(val)) {
