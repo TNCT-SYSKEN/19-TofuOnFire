@@ -15,3 +15,13 @@
 - 諸注意
     - 困ったらAnimelのソースコードを参考にする
     - デザインはインターネッツつながるとこでやろうな
+
+### VSCode環境構築
+#### ライブラリ
+- Cobalt2 Theme Official
+- Debugger for Chrome
+- ES7 React/Redux/GraphQL/React-Native snippets
+- ESLint
+- indent-rainbow
+- Japanese Language Pack
+
