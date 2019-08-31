@@ -1,11 +1,15 @@
+const Post = require('../models/post');
+
 const controller = {};
 
 controller.postList = (req, res, next) => {
-    res.status(501).end();
+    var list = Post.list();
+    res.send(list);
 };
 
 controller.postDetail = (req, res, next) => {
-    res.status(501).end();
+    var detail = Post.getDetail(req.postId);
+    res.send(detail);
 };
 
 controller.postCreate = (req, res, next) => {
