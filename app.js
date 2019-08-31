@@ -11,6 +11,8 @@ const app = express();
 app.use(express.json());
 app.use(logger('dev'));
 
+app.use('/images', express.static('./public/images'));
+
 app.use('/posts', postRouter);
 app.use('/nices', niceRouter);
 app.use('/users', userRouter);

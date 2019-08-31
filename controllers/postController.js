@@ -13,6 +13,13 @@ controller.postDetail = (req, res, next) => {
 };
 
 controller.postCreate = (req, res, next) => {
+    var imageLinks = req.files.map((file, index, array) => {return `/images/${file.filename}`});
+    Post.create(
+        req.body.userId,
+        req.body.title,
+        imageLinks
+    );
+
     res.status(200).end();
 };
 
