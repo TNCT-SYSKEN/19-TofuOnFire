@@ -14,7 +14,7 @@ app.use(logger('dev'));
 app.use('/images', express.static('./public/images'));
 
 app.use('/posts', postRouter);
-app.use('/nices', niceRouter);
+app.use('/nice', niceRouter);
 app.use('/users', userRouter);
 
 app.use(function(req, res, next) {

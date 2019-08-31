@@ -4,12 +4,12 @@ const controller = {};
 
 controller.niceCreate = (req, res, next) => {
     Nice.create(req.userId, req.postId);
-    res.status(200).end();
+    res.status(204).end();
 };
 
 controller.niceDelete = (req, res, next) => {
     Nice.delete(req.userId, req.postId);
-    res.status(200).end();
+    res.status(204).end();
 };
 
 controller.niceExists = (req, res, next) => {
