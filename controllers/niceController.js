@@ -22,7 +22,7 @@ controller.niceExists = (req, res, next) => {
 controller.niceCount = (req, res, next) => {
     var count = Nice.count(req.postId);
     res.send({
-        "count": count
+        "niceCount": count
     });
 };
 
