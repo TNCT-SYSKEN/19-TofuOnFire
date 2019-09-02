@@ -4,13 +4,25 @@ const createError = require('http-errors');
 const controller = {};
 
 controller.postList = (req, res, next) => {
-    const list = Post.getList();
-    res.send(list);
+    Post.getLatestPostId((latestPostId) => {
+        const postIds = [...Array(latestPostId).keys()].map(i => ++i);
+        for(var i = postIds.length - 1; i > 0; i--){
+            var r = Math.floor(Math.random() * (i + 1));
+            var tmp = postIds[i];
+            postIds[i] = postIds[r];
+            postIds[r] = tmp;
+        }
+        Post.getList(postIds, (list) => {
+            res.send(list);
+        });
+    });
 };
 
 controller.postDetail = (req, res, next) => {
-    const detail = Post.getDetail(req.postId);
-    res.send(detail);
+    throw new Error();
+    Post.getDetail(req.postId, (val) => {
+        res.send(val);
+    });
 };
 
 controller.postCreate = (req, res, next) => {
@@ -36,10 +48,11 @@ controller.postCreate = (req, res, next) => {
     Post.create(
         userId,
         title,
-        imageLinks
-    );
+        imageLinks,
+    () => {
+        res.status(200).end();
+    });
 
-    res.status(200).end();
 };
 
 module.exports = controller;

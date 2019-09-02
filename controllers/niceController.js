@@ -3,26 +3,31 @@ const Nice = require('../models/nice');
 const controller = {};
 
 controller.niceCreate = (req, res, next) => {
-    Nice.create(req.userId, req.postId);
-    res.status(204).end();
-};
-
-controller.niceDelete = (req, res, next) => {
-    Nice.delete(req.userId, req.postId);
-    res.status(204).end();
-};
-
-controller.niceExists = (req, res, next) => {
-    const niceExists = Nice.exists(req.userId, req.postId);
-    res.send({
-        "niceExists": niceExists
+    Nice.create(req.userId, req.postId, () => {
+        res.status(204).end();
     });
 };
 
+controller.niceDelete = (req, res, next) => {
+    Nice.delete(req.userId, req.postId, () => {
+        res.status(204).end();
+    });
+};
+
+controller.niceExists = (req, res, next) => {
+    Nice.exists(req.userId, req.postId, (val) => {
+        res.send({
+            "niceExists": val
+        });
+    });
+
+};
+
 controller.niceCount = (req, res, next) => {
-    const count = Nice.count(req.postId);
-    res.send({
-        "niceCount": count
+    Nice.count(req.postId, (val) => {
+        res.send({
+            "niceCount": val
+        });
     });
 };
 
