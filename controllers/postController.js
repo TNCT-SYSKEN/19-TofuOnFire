@@ -4,7 +4,7 @@ const createError = require('http-errors');
 const controller = {};
 
 controller.postList = (req, res, next) => {
-    var list = Post.list();
+    var list = Post.getList();
     res.send(list);
 };
 
