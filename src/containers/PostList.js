@@ -34,15 +34,16 @@ class PostList extends React.Component {
         renderCards.push(emptyCards);
 
             // 読み込み中はロード画面にする
-    if (AnimeListReducer.isFetching === true){
-        return (
-            <div>
-                <CircularProgress className={classes.progress} size={50} />
-            </div>
-        );
-    
-      // カードを表示
-        } else {
+        if (AnimeListReducer.isFetching === true){
+            return (
+                <div>
+                    <CircularProgress className={classes.progress} size={50} />
+                </div>
+            );
+
+        // カードを表示
+        }
+        else {
             return (
                 <div className={classes.root}>
                 {renderCards}
