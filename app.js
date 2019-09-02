@@ -22,8 +22,8 @@ app.use(function(req, res, next) {
 });
 
 app.use(function(err, req, res, next) {
-    res.send({
-        "error": err
+    res.status(err.statusCode || 500).send({
+        "error": err.message || "Something went wrong."
     });
 });
 
