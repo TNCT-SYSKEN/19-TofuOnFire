@@ -13,14 +13,14 @@ controller.niceDelete = (req, res, next) => {
 };
 
 controller.niceExists = (req, res, next) => {
-    var niceExists = Nice.exists(req.userId, req.postId);
+    const niceExists = Nice.exists(req.userId, req.postId);
     res.send({
         "niceExists": niceExists
     });
 };
 
 controller.niceCount = (req, res, next) => {
-    var count = Nice.count(req.postId);
+    const count = Nice.count(req.postId);
     res.send({
         "niceCount": count
     });

@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
         cb(null, './public/images/');
     },
     filename: (req, file, cb) => {
-        var regExFileName = /([\w\d_-]*)\.?[^\\\/]*$/i,
+        const regExFileName = /([\w\d_-]*)\.?[^\\\/]*$/i,
             regExFileNameExtension =/\.[0-9a-z]{1,5}$/i,
             fileNameBase = file.originalname.match(regExFileName)[1],
             fileNameExtension = file.originalname.match(regExFileNameExtension)[0],
