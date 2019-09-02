@@ -19,7 +19,6 @@ controller.postList = (req, res, next) => {
 };
 
 controller.postDetail = (req, res, next) => {
-    throw new Error();
     Post.getDetail(req.postId, (val) => {
         res.send(val);
     });
