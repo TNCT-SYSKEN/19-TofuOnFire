@@ -18,7 +18,6 @@ const styles = theme => ({
 class PostList extends React.Component {
     render() {
         const { ListReducer } = this.props;
-        const { classes } = this.props;
 
         const postItems = ListReducer.items;
         let renderCards = [];
@@ -34,10 +33,10 @@ class PostList extends React.Component {
         renderCards.push(emptyCards);
 
             // 読み込み中はロード画面にする
-        if (AnimeListReducer.isFetching === true){
+        if (ListReducer.isFetching === true){
             return (
                 <div>
-                    <CircularProgress className={classes.progress} size={50} />
+                    <CircularProgress size={50} />
                 </div>
             );
 
@@ -45,8 +44,8 @@ class PostList extends React.Component {
         }
         else {
             return (
-                <div className={classes.root}>
-                {renderCards}
+                <div>
+                    {renderCards}
                 </div>
             );
         }
@@ -54,7 +53,7 @@ class PostList extends React.Component {
 }
 
 // Material-ui関連
-AnimeList.propTypes = {
+PostList.propTypes = {
     classes: PropTypes.object.isRequired,
     theme: PropTypes.object.isRequired,
 };

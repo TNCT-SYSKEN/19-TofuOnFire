@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import Home from "./containers/Home";
+import PostList from "./containers/PostList";
 
 // Component
 import WrapContents from "./components/WrapContents";
@@ -16,7 +18,13 @@ const NotFound = () => {
 class App extends Component {
     render() {
         return (
-            // ここもコンテナわからんとわからんやん
+            <div className="App">
+                <Switch>
+                    <Route exact path="/" component={WrapContents(Home)} />
+                </Switch>
+            </div>
         );
     }
 }
+
+export default App;

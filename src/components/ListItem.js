@@ -5,7 +5,6 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from '@material-ui/core/Typography';
-import classes from "*.module.sass";
 import { CardContent } from "@material-ui/core";
 
 const styles = {
@@ -30,7 +29,7 @@ const styles = {
 }
 
 function ListItem(props) {
-    const { empty, title, image_url, } = props;
+    const { empty, title, image_url, classes} = props;
     if (empty === "true") {
         return (
             <Card className={classes.empty}>
@@ -38,7 +37,7 @@ function ListItem(props) {
         );
     } else {
         return (
-            <Card className={classes.card} onClick={cardOnClick}>
+            <Card className={classes.card}>
                 <CardContent>
                     <CardActions>
                         <CardMedia

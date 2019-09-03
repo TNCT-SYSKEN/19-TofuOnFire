@@ -3,6 +3,7 @@ import axios from "axios";
 
 export const getListRequest = () => ({
     type: actionTypes.GET_LIST_REQUEST,
+    items: [],
 });
 
 export const getListSuccess = (json) => ({

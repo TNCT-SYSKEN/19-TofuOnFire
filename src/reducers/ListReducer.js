@@ -2,7 +2,7 @@ import * as actionTypes from "../utils/actionTypes";
 
 const initialState = {
     isFetching: false,
-    items: []
+    items: [],
 };
 
 const ListReducer = (state = initialState, action) => {

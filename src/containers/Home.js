@@ -12,7 +12,7 @@ import * as actions from '../actions';
 // PostList取得
 import PostList from '../containers/PostList';
 
-const styles
+const styles = theme => ({});
 
 class Home extends React.Component {
     render(){

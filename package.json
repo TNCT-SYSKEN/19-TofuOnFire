@@ -2,7 +2,7 @@
   "name": "hack-u-2019",
   "version": "0.0.0",
   "description": "HackU 2019 OSAKA (〆錆)",
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
     "@material-ui/core": "^4.3.3",
     "axios": "^0.19.0",
@@ -40,5 +40,16 @@
     "url": "https://github.com/TNCT-SYSKEN/19-TofuOnFire/issues"
   },
   "homepage": "https://github.com/TNCT-SYSKEN/19-TofuOnFire#readme",
-  "devDependencies": {}
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
