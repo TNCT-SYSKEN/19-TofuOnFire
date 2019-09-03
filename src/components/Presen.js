@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -28,36 +27,28 @@ const styles = {
         padding: 0,
     },
 }
-
-function ListItem(props) {
-    const { empty, title, image_url, } = props;
+function Presen(params) {
+    const {empty, title, image_url, } = props;
     if (empty === "true") {
         return (
-            <Card className={classes.empty}>
-            </Card>
+            <Card className={classes.empty}></Card>
         );
     } else {
-        return (
-            <Card className={classes.card} onClick={cardOnClick}>
+        return(
+            <Card className={classes.card}>
                 <CardContent>
-                    <CardActions>
-                        <CardMedia
-                            className={classes.media}
-                            image="image_url"
-                            title={title}
-                        />
-                        <Typography className={classes.title}>
-                            {title}
-                        </Typography>
-                    </CardActions>
+                    <CardMedia
+                        className={classes.media}
+                        image = {image_url}
+                    />
                 </CardContent>
             </Card>
         );
     }
 }
 
-ListItem.propTypes = {
+Presen.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ListItem);
+export default withStyles(styles)(Presen);
